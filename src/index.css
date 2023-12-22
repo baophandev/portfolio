@@ -1,13 +1,140 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #1b1523;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar button, .navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  background-color: #2a0459;
+  border-radius: 5px;
+  border: none;
+}
+
+.navbar button:hover {
+  background-color: #f1356d;
+  transition: .5s;
+}
+
+.content{
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card{
+  background-color: #2a0459;
+
+}
+
+.btn-primary {
+  animation: colorChange 1s infinite;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #3498db;
+  }
+
+  50% {
+    background-color: #2ecc71;
+  }
+
+  100% {
+    background-color: #3498db;
+  }
+}
+
+@keyframes coloroutstanding {
+  0% {
+    border: 3px solid #3498db;
+  }
+
+  25% {
+    border: 3px solid #f1356d;
+  }
+
+  50% {
+    border: 3px solid #016673;
+  }
+
+  75% {
+    border: 3px solid #2ecc71;
+  }
+
+  100% {
+    border: 3px solid #3498db;
+  }
+}
+
+.card-img-top{
+  height: 220px;
+  object-fit: cover;
+}
+
+.outstanding{
+  animation: coloroutstanding 1s infinite;
+}
+
+.col-md-4 > img{
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.card-title{
+  color: #2ecc71;
+}
+
+.card-body-detail{
+  border-bottom: 3px solid #f1356d;
+}
+
+.card-title-detail-course{
+  color: #f1356d;
+}
+
+.register{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form{
+  position: absolute;
+  background-color: #2a0459;
 }
